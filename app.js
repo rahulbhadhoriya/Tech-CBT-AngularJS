@@ -20,9 +20,19 @@ app.factory("calcFactory", ["$http", "$log", function($http, $log) {
          return parseInt(a) + parseInt(b);
 
      };*/
+    /* oCalcService.getSum = function(a, b, cb) {
+          var s = parseInt(a) + parseInt(b);
+          cb(s);
+      };*/
     oCalcService.getSum = function(a, b, cb) {
-        var s = parseInt(a) + parseInt(b);
-        cb(s);
+        $http({
+            url: "",
+            method: "GET"
+        }).then(function(resp) {
+
+        }, function() {
+
+        })
     };
     return oCalcService;
-}])
+}]);
